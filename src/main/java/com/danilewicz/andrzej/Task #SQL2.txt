@@ -1,0 +1,25 @@
+1.	SELECT contactname FROM ORDERS WHERE amount>200 AND country='UK'
+2.	UPDATE ORDERS SET type='corn' WHERE id=2
+3.	SELECT SUM(amount) FROM ORDERS WHERE country='UK'
+
+// ***************************************************************************************************
+// For table creation:
+
+CREATE TABLE ORDERS(
+ID INT,
+ContactName VARCHAR(255) PRIMARY KEY,
+Address VARCHAR(255),
+City VARCHAR(255),
+PostalCode VARCHAR(255),
+Country VARCHAR(255),
+Amount INT,
+Type VARCHAR(255));
+
+INSERT INTO ORDERS(id,contactname,address,city,postalcode,country,amount,type)
+VALUES (1,'Schmidt GmbH','Obere,Str. 57','Frankfurt','12209','Germany',150,'Barley'),
+(2,'Meraux', 'Avda. de la Constitucion 2222', 'Paris', '05021', 'France', 24, 'Soybean'),
+(3,'Petersen A/S','Sundvej 2312','Aarhus','05023','Denmark',89,'Cotton'),
+(4,'Hardy Co.','120 Hanover Sq.','London','WA1 1DP','UK',32,'Potato'),
+(5,'Berglund','Berguvsvägen 8','Luleå','S-958 22','Sweden',78,'Cotton'),
+(6,'Fonda,Commodities','Mosley,Street 11','Manchester','M2 3JL','UK',220,'Early Rice'),
+(5,'McBoatie','Baker Street 21','London','81-3782','UK',78,'Onion');
